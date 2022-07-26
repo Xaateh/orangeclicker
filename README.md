@@ -3,7 +3,7 @@
 
 <h1>Orange Clicker <br>
   <a href="https://github.com/18O4/orangeclicker/releases"><img src="https://img.shields.io/github/downloads/18o4/orangeclicker/total?color=brightgreen&label=Total%20Downloads" alt="[total github downloads]"></a>
-  <a href="https://github.com/18O4/orangeclicker/blob/main/LICENSE"><img src="https://img.shields.io/github/license/18o4/orangeclicker?color=ff7700" alt="[license]"></a>
+  <a href="https://github.com/18O4/orangeclicker/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--SA%203.0%20License-ff7700" alt="[license]"></a>
   <a href="https://discord.gg/B8C2ngtYd9"><img src="https://img.shields.io/discord/943150957393477632?color=5865f2&label=Discord" alt="[discord]"></a>
 </h1>  
 
