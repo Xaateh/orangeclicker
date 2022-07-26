@@ -4,12 +4,23 @@
   "version": "1.0.0",
   "description": "My Electron application description",
   "main": "src/index.js",
+  "build": {
+    "appId": "tk.18o4.orangeclicker",
+    "productName": "orangeclicker",
+    "copyright": "Copyright © 2022 18O4",
+    "mac": {
+      "category": "public.app-category.games"
+    }
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "lint": "echo \"No linting configured\"",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
   },
   "keywords": [],
   "author": {
@@ -53,6 +64,7 @@
     "@electron-forge/maker-rpm": "^6.0.0-beta.63",
     "@electron-forge/maker-squirrel": "^6.0.0-beta.63",
     "@electron-forge/maker-zip": "^6.0.0-beta.63",
-    "electron": "19.0.9"
+    "electron": "19.0.9",
+    "electron-builder": "^23.1.0"
   }
 }

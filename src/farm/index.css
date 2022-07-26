@@ -1,7 +1,31 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  margin-top: 0;
+  background-color: #131313;
+}
+.main {
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.arrows {
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+}
+.arrows img {
+  width: 4vw;
+}
+.arrows img:hover {
+  filter: brightness(85%);
+}
+.arrows #left {
+  float: left;
+  padding-left: 5px;
+}
+.arrows #right {
+  float: right;
+  padding-left: 25px;
+  transform: scaleX(-1); -webkit-transform: scaleX(-1); 
 }
