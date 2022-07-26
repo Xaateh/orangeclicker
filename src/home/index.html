@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <script>
+      window.ondragstart = function() {return false}
+    </script>
     <div class="main">
       <h1>home</h1>
       <div class="arrows">
         <a href="../stand/index.html">
-          <img id="left" src="../img/arrow_left.png" alt="left arrow [click to navigate between places]">
+          <img id="left" src="../img/arrow_left.png" draggable="false" alt="left arrow [click to navigate between places]">
         </a>
         <a href="../farm/index.html">
           <img id="right" src="../img/arrow_left.png" alt="right arrow [click to navigate between places]">

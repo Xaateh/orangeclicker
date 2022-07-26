@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, dialog, session } = require('electron');
 const path = require('path');
+const { autoUpdater } = require("electron-updater")
+
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -12,14 +14,32 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 1200,
     height: 800,
+    icon: 'build/orange.ico'
   });
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, '/home/index.html'));
 
+  // check for updates
+  autoUpdater.checkForUpdatesAndNotify()
+
+  // hide menu bar
   mainWindow.setMenuBarVisibility(false)
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
+
+  // set default cookies
+session.defaultSession.cookies.get({})
+.then(cookies => {
+  console.log(cookies)
+});
+const cookie = { url: 'https://github.com', name: 'dummy_name', value: 'dummy' }
+session.defaultSession.cookies.set(cookie)
+.then(() => {
+  session.defaultSession.cookies.get({url: 'https://www.github.com'}, (error, cookies) => {
+        console.log(error, cookies)
+      })
+}, (error) => {
+  console.error(error)
+})
 };
 
 // This method will be called when Electron has finished
@@ -44,5 +64,19 @@ app.on('activate', () => {
   }
 });
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and import them here.
+
+// auto updater
+autoUpdater.on("update-available", (_event, releaseNotes, releaseName) => {
+  const dialogOpts = {
+    type: 'info',
+    buttons: ['Ok'],
+    title: 'Update Available',
+    message: process.platform === 'win32' ? releaseNotes : releaseName,
+    detail: 'A new version is being downloaded. \nGame will restart shortly.'
+  }
+  dialog.showMessageBox(dialogOpts, (response) => {
+  })
+})
+autoUpdater.on("update-downloaded", (_event) => {
+  autoUpdater.quitAndInstall()
+})

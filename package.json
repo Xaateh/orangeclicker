@@ -1,33 +1,44 @@
 {
-  "name": "18o4game",
-  "productName": "18o4game",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "name": "orangeclicker",
+  "productName": "orangeclicker",
+  "version": "0.0.1",
+  "description": "idle clicker game with oranges",
   "main": "src/index.js",
   "build": {
     "appId": "tk.18o4.orangeclicker",
-    "productName": "orangeclicker",
+    "productName": "Orange Clicker",
     "copyright": "Copyright © 2022 18O4",
-    "mac": {
-      "category": "public.app-category.games"
+    "win": {
+      "target": "nsis",
+      "icon": "build/orange.ico",
+      "publish": [
+        "github"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "installerIcon": "build/orange.ico",
+      "uninstallerIcon": "build/orange.ico",
+      "uninstallDisplayName": "Orange Clicker",
+      "license": "LICENSE",
+      "allowToChangeInstallationDirectory": true
     }
   },
   "scripts": {
     "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
+    "publish": "electron-builder --publish \"always\"",
     "lint": "echo \"No linting configured\"",
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
-    "postinstall": "electron-builder install-app-deps"
+    "postinstall": "electron-builder install-app-deps",
+    "release": "electron-builder"
   },
   "keywords": [],
   "author": {
     "name": "18o4",
     "email": "64557095+18O4@users.noreply.github.com"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -56,7 +67,8 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^5.0.5"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",

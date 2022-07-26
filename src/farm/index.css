@@ -2,17 +2,74 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
     Arial, sans-serif;
   margin-top: 0;
-  background-color: #131313;
+  background-color: #7bd3f7;
+}
+.orangeCounter {
+  position: absolute;
+  top: -2vh;
+  left: 1vw;
+}
+.orangeCounter img {
+  width: 6vh;
+  position:relative;
+  top: 6px;
 }
 .main {
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
 }
+.trees {
+  width: 100%;
+}
+.trees img {
+  width: 40vh;
+  position: absolute;
+  bottom: 13vh;
+  right: 12vw;
+  transition: 0.1s all ease-in-out;
+  cursor: pointer;
+}
+.trees img:active {
+  transition: 0.01s all ease-in-out;
+  transform: scale(95%);
+}
+.grass {
+  border-top: 2px solid;
+  border-color: #000000;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 5vh;
+  bottom: 13vh;
+  z-index: 1;
+  background-color: #55c233;
+}
+.grass-fadeout {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 2vh;
+  bottom: 11vh;
+  z-index: 1;
+  opacity: 75%;
+  background-color: #55c233;
+}
+.ground {
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 18vh;
+  bottom: 0;
+  background-color: #9b7653;
+}
+
+/* NAV ARROWS */
 .arrows {
   position: fixed;
   bottom: 50px;
   width: 100%;
+  z-index: 100;
 }
 .arrows img {
   width: 4vw;

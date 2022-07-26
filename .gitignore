@@ -1,6 +1,7 @@
 # stuff
 dist
 yarn.lock
+build
 
 # Logs
 logs
