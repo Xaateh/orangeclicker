@@ -25,7 +25,7 @@ to be added
 ### This means you are allowed to:
 ✅ Use this for commercial purposes, <br>
 ✅ Modify the source code, <br>
-✅ Distribute it, <br>
+✅ Distribute it. <br>
 ### But only under those conditions:
 ❗ You **must** give [appropriate credit](https://wiki.creativecommons.org/wiki/License_Versions#Detailed_attribution_comparison_chart), provide a link to [this](https://github.com/18O4/orangeclicker/blob/main/LICENSE) license <br>and indicate if any changes were made ([More info](https://wiki.creativecommons.org/License_Versions#Modifications_and_adaptations_must_be_marked_as_such)], <br>
 ❗ You **must** distribute your modifications of [this](https://github.com/18O4/orangeclicker) code under [this](https://github.com/18O4/orangeclicker/blob/main/LICENSE) license. <br>
