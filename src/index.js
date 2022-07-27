@@ -1,4 +1,4 @@
-const { app, BrowserWindow, dialog, session } = require('electron');
+const { app, BrowserWindow, dialog } = require('electron');
 const path = require('path');
 const { autoUpdater } = require("electron-updater")
 
@@ -25,21 +25,6 @@ const createWindow = () => {
 
   // hide menu bar
   mainWindow.setMenuBarVisibility(false)
-
-  // set default cookies
-session.defaultSession.cookies.get({})
-.then(cookies => {
-  console.log(cookies)
-});
-const cookie = { url: 'https://github.com', name: 'dummy_name', value: 'dummy' }
-session.defaultSession.cookies.set(cookie)
-.then(() => {
-  session.defaultSession.cookies.get({url: 'https://www.github.com'}, (error, cookies) => {
-        console.log(error, cookies)
-      })
-}, (error) => {
-  console.error(error)
-})
 };
 
 // This method will be called when Electron has finished
@@ -63,7 +48,6 @@ app.on('activate', () => {
     createWindow();
   }
 });
-
 
 // auto updater
 autoUpdater.on("update-available", (_event, releaseNotes, releaseName) => {

@@ -4,21 +4,29 @@ body {
   margin-top: 0;
   background-color: #7bd3f7;
 }
-.orangeCounter {
-  position: absolute;
-  top: -2vh;
-  left: 1vw;
+.stats {
+  z-index: -1;
+  width: max-content;
+  margin: 0px 0px;
+  text-align:left !important;
 }
-.orangeCounter img {
-  width: 6vh;
+.stats h1 {
+  display: inline;
+}
+.stats img {
   position:relative;
-  top: 6px;
-}
+  top: -3px;
+} 
 .main {
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
 }
+.page {
+  position: absolute;
+  left: 44.5%;
+  top: 0;
+} 
 .trees {
   width: 100%;
 }
