@@ -1,15 +1,4 @@
-
-function setup() {
-    document.getElementById('orangeCounter').textContent=localStorage.getItem('oranges');
-    // coinsElement = document.getElementById('coinCounter');
-    // coinsValue = localStorage.getItem('coins');
-    // if (coinsValue == null || coinsValue == 0) {
-    //     coinsElement.parentElement.style="display: none;"
-    // } else {
-    //     coinsElement.textContent='sex';
-    // }
-}
-
+const { millify } = require('millify');
 
 function orangeHarvest() {
     if (localStorage.getItem('oranges') == null) {
@@ -17,5 +6,5 @@ function orangeHarvest() {
     }
     const oranges = Number(localStorage.getItem('oranges')) + 1;
     localStorage.setItem('oranges', oranges);
-    document.getElementById('orangeCounter').textContent=oranges;
+    document.getElementById('orangeCounter').textContent=millify(Number(oranges));
 }

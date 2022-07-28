@@ -6,8 +6,20 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
+    <script>
+      window.ondragstart = function() {return false}
+    </script>
     <div class="main">
-      <h1>stand</h1>
+      <div class="stats">
+        <div class="oranges">
+          <img src="../img/orange_32.png" alt=""><h1 id="orangeCounter"></h1>
+        </div> 
+      </div>
+      
+      <div class="page">
+        <h1>stand</h1>
+      </div>
+
       <div class="arrows">
         <a href="../home/index.html">
           <img id="right" src="../img/arrow_left.png" alt="right arrow [click to navigate between places]">
@@ -15,6 +27,6 @@
       </div>
       
     </div>
-    <script src="./scripts.js"></script>
+    <script src="../farm/scripts.js"></script>
   </body>
 </html>

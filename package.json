@@ -1,7 +1,7 @@
 {
   "name": "orangeclicker",
   "productName": "orangeclicker",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "idle clicker game with oranges",
   "main": "src/index.js",
   "build": {
@@ -68,7 +68,8 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "electron-updater": "^5.0.5"
+    "electron-updater": "^5.0.5",
+    "millify": "^5.0.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.63",

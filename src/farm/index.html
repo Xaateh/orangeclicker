@@ -5,7 +5,12 @@
     <title>Orange Clicker</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body onload="setup()">
+  <body>
+    <script>
+      window.ondragstart = function() {return false};
+      const { millify } = require('millify');
+      console.log(millify(123))
+    </script>
 
     <div class="main">
 
@@ -24,7 +29,7 @@
       </div>
       
       <div class="farm">
-        <div class="trees">
+        <div id="orangeTrees" class="trees">
           <img src="../img/orangetree.png" onclick="orangeHarvest()" alt="">
         </div>
       </div>
@@ -38,6 +43,6 @@
       </div>
       
     </div>
-    <script src="./scripts.js"></script>
+    <script type="module" src="./scripts.js"></script>
   </body>
 </html>

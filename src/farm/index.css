@@ -3,6 +3,7 @@ body {
     Arial, sans-serif;
   margin-top: 0;
   background-color: #7bd3f7;
+  user-select:none;
 }
 .stats {
   z-index: -1;

@@ -3,12 +3,31 @@ body {
     Arial, sans-serif;
   margin-top: 0;
   background-color: #131313;
+  user-select:none;
 }
+.stats {
+  z-index: -1;
+  width: max-content;
+  margin: 0px 0px;
+  text-align:left !important;
+}
+.stats h1 {
+  display: inline;
+}
+.stats img {
+  position:relative;
+  top: -3px;
+} 
 .main {
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
 }
+.page {
+  position: absolute;
+  left: 44.5%;
+  top: 0;
+} 
 .arrows {
   position: fixed;
   bottom: 50px;
