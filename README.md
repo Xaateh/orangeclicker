@@ -1,6 +1,7 @@
-<div align="center"
-<img src="https://raw.githubusercontent.com/18O4/orangeclicker/main/src/img/orangetree.png" alt="[orange clicker logo]">
-
+<div align="center"> 
+<p>
+  <img width="25%" src="https://raw.githubusercontent.com/18O4/orangeclicker/main/src/img/orangetree.png">
+</p>
 <h1>Orange Clicker <br>
   <a href="https://github.com/18O4/orangeclicker/releases"><img src="https://img.shields.io/github/downloads/18o4/orangeclicker/total?color=brightgreen&label=Total%20Downloads" alt="[total github downloads]"></a>
   <a href="https://github.com/18O4/orangeclicker/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-CC%20BY--SA%203.0%20License-ff4269" alt="[license]"></a>
