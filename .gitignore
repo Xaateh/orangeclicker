@@ -2,6 +2,7 @@
 dist
 yarn.lock
 build
+TODO.md
 
 # Logs
 logs

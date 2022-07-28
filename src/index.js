@@ -20,8 +20,14 @@ const createWindow = () => {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, '/home/index.html'));
 
+  mainWindow.webContents.on('before-input-event', (event, input) => {
+    if (input.control && input.key.toLowerCase() === 'i' && input.shift) {
+      event.preventDefault()
+    }
+  })
+
   // check for updates
-  autoUpdater.checkForUpdatesAndNotify()
+  autoUpdater.checkForUpdates()
 
   // hide menu bar
   mainWindow.setMenuBarVisibility(false)
@@ -62,5 +68,5 @@ autoUpdater.on("update-available", (_event, releaseNotes, releaseName) => {
   })
 })
 autoUpdater.on("update-downloaded", (_event) => {
-  autoUpdater.quitAndInstall()
+  autoUpdater.quitAndInstall(true, true);
 })

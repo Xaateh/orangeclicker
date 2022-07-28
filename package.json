@@ -1,7 +1,7 @@
 {
   "name": "orangeclicker",
   "productName": "orangeclicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "idle clicker game with oranges",
   "main": "src/index.js",
   "build": {
@@ -38,7 +38,7 @@
     "name": "18o4",
     "email": "64557095+18O4@users.noreply.github.com"
   },
-  "license": "Apache-2.0",
+  "license": "CC BY-SA 3.0",
   "config": {
     "forge": {
       "packagerConfig": {},
