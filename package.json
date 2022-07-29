@@ -1,7 +1,7 @@
 {
   "name": "orangeclicker",
   "productName": "orangeclicker",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "idle clicker game with oranges",
   "main": "src/index.js",
   "build": {

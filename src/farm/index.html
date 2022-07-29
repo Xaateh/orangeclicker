@@ -5,11 +5,10 @@
     <title>Orange Clicker</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-  <body>
+  <body onload="setupCanvas()">
     <script>
       window.ondragstart = function() {return false};
       const { millify } = require('millify');
-      console.log(millify(123))
     </script>
 
     <div class="main">
@@ -30,7 +29,8 @@
       
       <div class="farm">
         <div id="orangeTrees" class="trees">
-          <img src="../img/orangetree.png" onclick="orangeHarvest()" alt="">
+          <img src="../img/orangetree.png" style="pointer-events: auto;" onclick="orangeHarvest()" alt="[orange tree]" id="orangeTree">
+          <canvas id="treesCanvas" style="pointer-events: none;"></canvas>
         </div>
       </div>
       <div class="grass"></div>
@@ -43,6 +43,6 @@
       </div>
       
     </div>
-    <script type="module" src="./scripts.js"></script>
+    <script src="./scripts.js"></script>
   </body>
 </html>

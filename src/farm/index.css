@@ -31,7 +31,7 @@ body {
 .trees {
   width: 100%;
 }
-.trees img {
+.trees img, #treesCanvas {
   width: 40vh;
   position: absolute;
   bottom: 13vh;
